@@ -108,25 +108,27 @@ export default function Hero() {
                 style={{ y: imgY, scale: imgScale }}
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 260, damping: 24 }}
-                className="relative aspect-[4/5] rounded-apple-xl overflow-hidden bg-moss-100 apple-shadow will-change-transform group"
+                className="relative rounded-apple-xl bg-paper-50 p-1.5 lg:p-2 apple-shadow will-change-transform group"
               >
-                <Image
-                  src="/julia-tom-hero.png"
-                  alt="Julia und Tom Hecken"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 42vw, 90vw"
-                  className="object-cover object-center transition-transform duration-[1.5s] group-hover:scale-[1.04]"
-                />
-                {/* Warm color grade */}
-                <div className="absolute inset-0 mix-blend-soft-light bg-gradient-to-tr from-moss-500/25 via-transparent to-oak-200/40 pointer-events-none" />
+                <div className="relative aspect-[4/5] rounded-[40px] overflow-hidden bg-moss-100">
+                  <Image
+                    src="/julia-tom-hero.png"
+                    alt="Julia und Tom Hecken"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 42vw, 90vw"
+                    className="object-cover object-center transition-transform duration-[1.5s] group-hover:scale-[1.04]"
+                  />
+                  {/* Warm color grade */}
+                  <div className="absolute inset-0 mix-blend-soft-light bg-gradient-to-tr from-moss-500/25 via-transparent to-oak-200/40 pointer-events-none" />
 
-                {/* Corner sticker */}
-                <div className="absolute top-5 left-5 flex items-center gap-2.5 bg-paper-50/90 backdrop-blur-xl rounded-full pl-2 pr-4 py-1.5 apple-shadow">
-                  <span className="w-2 h-2 rounded-full bg-moss-500 animate-pulse-soft" />
-                  <span className="text-[11px] font-medium text-ink-800 tracking-wide">
-                    Neue Termine frei
-                  </span>
+                  {/* Corner sticker */}
+                  <div className="absolute top-4 left-4 flex items-center gap-2.5 bg-paper-50/90 backdrop-blur-xl rounded-full pl-2 pr-4 py-1.5 apple-shadow">
+                    <span className="w-2 h-2 rounded-full bg-moss-500 animate-pulse-soft" />
+                    <span className="text-[11px] font-medium text-ink-800 tracking-wide">
+                      Neue Termine frei
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             </div>
